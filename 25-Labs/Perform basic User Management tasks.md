@@ -87,3 +87,122 @@ Step 9 > Verify users created
 ## ✅ Summary Flow
 
 Create User > Assign License > Invite Guest > Assign Role > Bulk Import
+
+
+# 🔐 Microsoft Entra – User Management (Summary)
+
+## 📌 Overview
+Microsoft Entra ID allows you to:
+- Create users (internal or external)
+- Invite guest users
+- Delete users
+- Manage access and authentication
+
+---
+
+## 👥 Types of Users
+
+- Internal Member → Employees (full access)
+- Internal Guest → Guest access but created in tenant
+- External Member → External account + member access
+- External Guest → External account + limited (guest) access
+
+✅ Tip:
+Choose user type based on access needs
+
+---
+
+## ✅ Prerequisites (Roles)
+
+- Create user → User Administrator  
+- Invite guest → Guest Inviter  
+- Assign roles → Privileged Role Administrator  
+
+---
+
+## 🧩 Create a New User
+
+Step 1 > Entra > Users  
+Step 2 > + New user > Create new user  
+Step 3 > Enter:
+- Username (UPN)  
+- Display name  
+- Password  
+Step 4 > Set:
+- User type (Member/Guest)  
+- Location  
+Step 5 > (Optional) Add:
+- Groups / Roles / Admin unit  
+Step 6 > Review + Create  
+
+✅ Result:
+User created with defined access  
+
+---
+
+## 🌐 Create External User (External Tenant)
+
+Step 1 > Switch to external tenant  
+Step 2 > Users > Create new external user  
+Step 3 > Use email as sign-in  
+Step 4 > Add properties (optional)  
+Step 5 > Create  
+
+✅ Note:
+External users authenticate outside your tenant  
+
+---
+
+## 📩 Invite External Guest
+
+Step 1 > Users > Invite external user  
+Step 2 > Enter email + display name  
+Step 3 > Send invitation  
+Step 4 > Guest accepts email invite  
+
+✅ Tip:
+Check invitation status (Pending / Accepted)
+
+---
+
+## ➕ Assign Access
+
+During or after creation:
+
+Step 1 > Add to Groups  
+Step 2 > Assign Roles (RBAC)  
+Step 3 > Assign Licenses  
+
+✅ Best Practice:
+Use groups instead of direct assignments  
+
+---
+
+## ❌ Delete a User
+
+Step 1 > Users > Select user  
+Step 2 > Click Delete  
+Step 3 > Confirm  
+
+✅ Notes:
+- User is soft-deleted for 30 days  
+- Can be restored within that period  
+- Licenses are freed  
+
+---
+
+## 🔁 Lifecycle Summary
+
+Create User > Assign Access > Manage > Disable/Delete  
+
+---
+
+## 🧠 Key Takeaways
+
+- Identity type determines access & authentication  
+- External users authenticate differently  
+- Use least privilege (RBAC)  
+- Always manage lifecycle (Joiner > Mover > Leaver)  
+- Deleted users can be restored (30 days)  
+
+
