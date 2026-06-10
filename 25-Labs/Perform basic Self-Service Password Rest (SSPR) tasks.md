@@ -50,6 +50,116 @@ Step 4 > Click Save
 
 ---
 
+
 ## ✅ Summary Flow
 
 Enable SSPR > Assign Group > Configure Auth Methods > Enforce Registration > Enable Notifications
+
+
+
+# 🔐 Microsoft Entra – Self-Service Password Reset (SSPR) (Summary)
+
+## 📌 Overview
+Self-Service Password Reset (SSPR) allows users to:
+- Reset or change passwords without IT support  
+- Recover access if they forget their password or get locked out  
+
+✅ Benefits:
+- Reduces helpdesk workload  
+- Improves user productivity  
+- Enhances security  
+
+---
+
+## 🧠 How SSPR Works
+
+Step 1 > User selects Sign in  
+Step 2 > Enters email  
+Step 3 > Clicks Forgot password  
+Step 4 > Chooses verification method (Email OTP / SMS)  
+Step 5 > Receives one-time passcode  
+Step 6 > Enters passcode  
+Step 7 > Creates new password  
+
+✅ Result:
+User regains access without admin help  
+
+---
+
+## ⚙️ Prerequisites
+
+- External tenant created  
+- Role: Security Administrator  
+- User flow configured  
+
+---
+
+## 🧩 Enable SSPR (User Flow)
+
+Step 1 > Go to https://entra.microsoft.com  
+Step 2 > Switch to external tenant  
+Step 3 > Navigate: External Identities > User flows  
+Step 4 > Select user flow  
+Step 5 > Ensure Email with password is enabled  
+Step 6 > Save  
+
+---
+
+## 🔐 Enable Authentication Method (Email OTP)
+
+Step 1 > Go to Authentication methods  
+Step 2 > Select Email OTP  
+Step 3 > Enable method  
+Step 4 > Choose:
+- All users OR  
+- Selected groups  
+Step 5 > Click Save  
+
+---
+
+## 🔗 Enable Password Reset Link (Optional)
+
+Step 1 > Go to Company Branding  
+Step 2 > Edit Default sign-in  
+Step 3 > Show "Self-service password reset"  
+Step 4 > Save  
+
+✅ Result:
+Forgot password link visible on sign-in page  
+
+---
+
+## ✅ Test SSPR
+
+Step 1 > Open app  
+Step 2 > Click Sign in  
+Step 3 > Enter email  
+Step 4 > Click Forgot password  
+Step 5 > Enter OTP (email or SMS)  
+Step 6 > Set new password  
+
+✅ Result:
+Password successfully reset  
+
+---
+
+## ✅ Summary Flow
+
+Enable User Flow > Configure Auth Method > Show Reset Link > Test SSPR  
+
+---
+
+## 🧠 Key Takeaways
+
+- Users can reset passwords without IT  
+- Uses Email OTP or SMS verification  
+- Works with external (customer) identities  
+- Improves security + reduces support load  
+
+---
+
+## 🔐 Security Insight
+
+👉 SSPR + MFA = Strong account recovery protection  
+
+(Prevents unauthorized password resets)
