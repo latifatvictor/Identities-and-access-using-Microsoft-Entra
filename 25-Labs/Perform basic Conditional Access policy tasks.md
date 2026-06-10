@@ -70,6 +70,167 @@ Step 4 > Review result (Policy not applied)
 
 ---
 
+
+# 🛡 Microsoft Entra – Conditional Access Policy (Summary)
+
+## 📌 Overview
+Conditional Access (CA) = **If → Then logic**
+
+✅ Example:
+If user signs in → Then require MFA  
+
+Policies combine:
+- Assignments (who, what, where)  
+- Access controls (block or allow with conditions)  
+
+---
+
+## ⚙️ How Policies Work
+
+✅ Multiple policies can apply at once  
+→ ALL must be satisfied (AND logic)
+
+✅ Example:
+Policy 1 = Require MFA  
+Policy 2 = Require compliant device  
+➡ User must complete BOTH  
+
+---
+
+## 🔄 Policy Evaluation Process
+
+### Phase 1 – Collect Data
+
+Step 1 > Gather session details:
+- Location  
+- Device  
+- Risk  
+
+---
+
+### Phase 2 – Enforce Policy
+
+Step 2 > Check requirements  
+Step 3 > If Block access → Deny immediately ❌  
+Step 4 > Otherwise prompt in order:
+
+- MFA  
+- Device compliance  
+- Hybrid join  
+- Approved app  
+- App protection  
+- Password change  
+- Terms of use  
+
+Step 5 > Apply session controls  
+
+---
+
+## 🧩 Assignments (Who / What / Where)
+
+### 👤 Users & Groups
+- All users  
+- Specific users/groups  
+- Roles (admins)  
+- Guests  
+
+✅ Tip:
+Exclude admin account to avoid lockout  
+
+---
+
+### 📱 Target Resources
+- Cloud apps (e.g. M365, Sway)  
+- User actions  
+
+---
+
+### 🌍 Network (Location)
+- IP addresses  
+- Countries  
+- Trusted locations  
+
+---
+
+### ⚙️ Conditions
+
+- Sign-in risk  
+- Device platform (Windows, iOS, etc.)  
+- Client apps (Browser, Mobile)  
+- Device filters  
+
+---
+
+## 🔐 Access Controls
+
+### 🚫 Block Access
+- Completely deny access  
+
+---
+
+### ✅ Grant Access (with conditions)
+
+- Require MFA  
+- Require compliant device  
+- Require hybrid joined device  
+- Require approved app  
+- Require password change  
+- Require terms of use  
+
+---
+
+### 🎯 Control Options
+
+- Require ALL controls ✅  
+- Require ONE control (OR logic)  
+
+---
+
+## 🖥 Session Controls
+
+- Limit user session  
+- Control access (view only, no download)  
+- Monitor activity  
+
+✅ Examples:
+- Block downloads  
+- Restrict copy/paste  
+- Set sign-in frequency  
+
+---
+
+## ✅ Minimum Requirements for Policy
+
+Step 1 > Name policy  
+Step 2 > Assign users/groups  
+Step 3 > Select target resources  
+Step 4 > Configure access control  
+
+---
+
+## ✅ Summary Flow
+
+Define Users > Select App > Set Conditions > Apply Controls > Enforce Policy  
+
+---
+
+## 🧠 Key Takeaways
+
+- Conditional Access = Identity firewall  
+- Policies use AND logic  
+- Always test with Report-only first  
+- Use MFA + device + risk together  
+- Multiple policies can apply simultaneously  
+
+---
+
+## 🔐 Security Insight
+
+👉 Strongest setup:
+Conditional Access + MFA + Device Compliance  
+
+(Not just one control alone)
+
 ## ✅ Summary Flow
 
 Create Policy > Assign User > Target App > Block Access > Enable > Test with What If
